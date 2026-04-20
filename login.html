@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio sesion</title>
+    <link rel="stylesheet" href="styles_login.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="login-conteiner">
+        <div class="titulo">
+            <h2>CENTRO INFANTIL</h2>
+            <h2>DON BOSQUITO</h2>
+        </div>
+        <input type="text" id="usuario" placeholder="Usuario">
+        <div class="password-container">
+            <input type="password" id="password" placeholder="Contraseña">
+            <button type="button" onclick="togglePassword(this)">👁️</button>
+        </div>
+        <button class="btn-ingresar" onclick="login()">Ingresar</button>
+        <p id="mensaje"></p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

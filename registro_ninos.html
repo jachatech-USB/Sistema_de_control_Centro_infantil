@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de ninos</title>
+    <link rel="stylesheet" href="styles_registro.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <main class="panel-registro">
+        <section class="encabezado-registro">
+            <div class="inf-encabezado-reg">
+                <p class="subtitulo">Centro infantil don BOSQUITO</p>
+                <div class="fila-subtitulo">
+                    <h1>Registro de niños</h1>
+                    <a class="boton-volver-inicio" href="inicio.html">Volver al inicio</a>
+                </div>
+                <p class="descripcion">
+                    Primero indica la cantidad de ninos y completa sus formularios. Despues registra los datos del responsable.
+                </p>
+            </div>
+            
+        </section>
+
+        <form id="formRegistro" class="formulario-registro">
+            <section class="bloque-formulario">
+                <div class="bloque-titulo">
+                    <h2>Cantidad de ninos</h2>
+                    <p>Indica cuantos ninos vas a registrar con este responsable.</p>
+                </div>
+
+                <div class="fila-cantidad">
+                    <label class="campo-cantidad">
+                        Cantidad
+                        <input type="number" id="cantidadNinos" min="1" max="10" placeholder="Ej. 2" required>
+                    </label>
+
+                    <button type="button" id="generarFormularios" class="boton-primario">Generar formularios</button>
+                </div>
+            </section>
+
+            <section id="seccionNinos" class="bloque-formulario bloque-dinamico oculto">
+                <div class="bloque-titulo">
+                    <h2>Datos de los ninos</h2>
+                    <p>Se generaran los formularios segun la cantidad indicada.</p>
+                </div>
+
+                <div id="contenedorNinos" class="contenedor-ninos"></div>
+            </section>
+
+            <section class="bloque-formulario bloque-responsable">
+                <div class="bloque-titulo">
+                    <h2>Datos del responsable</h2>
+                    <p>Informacion del padre, madre o tutor legal.</p>
+                </div>
+
+                <div class="grid-formulario grid-responsable">
+                    <label>
+                        Nombre completo
+                        <input type="varchar" name="nombrePadre" placeholder="Ej. Maria Lopez" required>
+                    </label>
+
+                    <label>
+                        Cedula de identidad
+                        <input type="int" name="ciPadre" placeholder="Ej. 12345678" required>
+                    </label>
+
+                    <label>
+                        Telefono
+                        <input type="int" name="telefonoPadre" placeholder="Ej. 71234567" required>
+                    </label>
+
+                    <label>
+                        Telefono de emergencia
+                        <input type="int" name="telefonoPadre" placeholder="Ej. 71234567" required>
+                    </label>
+
+                    <label>
+                        Direccion
+                        <input type="text" name="direccionPadre" placeholder="Ej. Zona Central, Calle 5" required>
+                    </label>
+
+                    <label>
+                        Es independiente
+                        <select name="independencia" required>
+                            <option value="">Seleccionar</option>
+                            <option value="Si">Si</option>
+                            <option value="No">No</option>
+                        </select>
+                    </label>
+
+                    <label>
+                        Parentesco
+                        <select name="parentesco" required>
+                            <option value="">Seleccionar</option>
+                            <option value="Madre">Madre</option>
+                            <option value="Padre">Padre</option>
+                            <option value="Tutor">Tutor</option>
+                        </select>
+                    </label>
+
+                    <label>
+                        Es estudiante del instituto
+                        <select name="esEstudiante" id="esEstudiante" required>
+                            <option value="">Seleccionar</option>
+                            <option value="Si">Si</option>
+                            <option value="No">No</option>
+                        </select>
+                    </label>
+
+                    
+                </div>
+
+                <div id="camposEstudiante" class="grid-formulario grid-responsable oculto seccion-estudiante">
+                    <label>
+                        Registro ITDB
+                        <input type="varchar" id="registro_ITDB" name="registro_ITDB" placeholder="Ej. 123456">
+                    </label>
+
+                    <label>
+                        Carrera
+                        <select name="nombre_carrera" required>
+                            <option value="">Seleccionar</option>
+                            <option value="mec_aut">Mecánica automotriz</option>
+                            <option value="mec_ind">Mecánica industrial</option>
+                            <option value="elc-ind">Electricidad industrial</option>
+                            <option value="art-graf">Artes gráficas</option>
+                            <option value="adm-emp">Administración de empresas</option>
+                            <option value="sec-ejc">Secretariado ejecutivo</option>
+                            <option value="cont-gnr">Contaduría general</option>
+                            <option value="sis-inf">Sistemas informáticos</option>
+                        </select>
+                    </label>
+
+                    <label>
+                        Gestión de ingreso
+                        <input type="int" id="año_ingreso" name="año_ingreso" placeholder="Ej. 2005">
+                    </label>
+
+                    <label>
+                        Año
+                        <input type="text" id="añoEstudiante" name="semestreEstudiante" placeholder="Ej. 4to semestre">
+                    </label>
+
+                    <label>
+                        Semestre
+                        <input type="text" id="semestreEstudiante" name="semestreEstudiante" placeholder="Ej. 4to semestre">
+                    </label>
+
+                    <label>
+                        Turno de clases
+                        <select name="turno_clases" id="turno_clases" required>
+                            <option value="">Seleccionar</option>
+                            <option value="Mañana">Mañana</option>
+                            <option value="Tarde">Tarde</option>
+                            <option value="Noche">Noche</option>
+                        </select>
+                    </label>
+
+                    <label>
+                        Trabaja
+                        <select name="trabaja_si_no" id="trabaja_si_no" required>
+                            <option value="">Seleccionar</option>
+                            <option value="Si">Si</option>
+                            <option value="No">No</option>
+                        </select>
+                    </label>
+
+                </div>
+            </section>
+
+            <div class="acciones-formulario">
+                <button type="submit" class="boton-primario boton-guardar">Guardar registro</button>
+            </div>
+        </form>
+    </main>
+
+    <script src="registro_ninos.js"></script>
+</body>
+</html>

@@ -1,0 +1,159 @@
+body {
+    font-family: "Fredoka", sans-serif; /* Define la fuente principal */
+    background: linear-gradient(135deg, #f7f4ea 0%, #dff1ff 100%); /* Crea el fondo degradado */
+    display: flex; /* Activa flexbox para poder centrar */
+    justify-content: center; /* Centra horizontalmente el cuadro de login */
+    align-items: center; /* Centra verticalmente el cuadro de login */
+    min-height: 100vh; /* Hace que el body ocupe toda la pantalla */
+    padding: 16px; /* Deja espacio exterior alrededor */
+    color: #24303f; /* Define el color base del texto */
+}
+
+.login-conteiner {
+    background: #ffffff; /* Pone fondo blanco al contenedor */
+    box-shadow: 0 18px 45px rgba(38, 76, 110, 0.16); /* Agrega sombra para dar profundidad */
+    padding: 32px 28px; /* Agrega espacio interno */
+    border-radius: 28px; /* Redondea las esquinas */
+    text-align: center; /* Centra el texto interno */
+    display: flex; /* Activa flexbox dentro del contenedor */
+    flex-direction: column; /* Apila elementos verticalmente */
+    gap: 16px; /* Separa los elementos entre si */
+    width: min(100%, 390px); /* Usa todo el ancho disponible hasta 390px */
+}
+
+.titulo {
+    margin-bottom: 8px; /* Separa el bloque del titulo del resto */
+}
+
+.titulo h2:first-child {
+    font-size: 15px; /* Define el tamano del subtitulo */
+    text-transform: uppercase; /* Convierte el subtitulo en mayusculas */
+    letter-spacing: 1px; /* Separa las letras */
+    color: #f08b2d; /* Cambia el color del subtitulo */
+    margin-bottom: 6px; /* Separa las dos lineas del titulo */
+}
+
+.titulo h2:last-child {
+    font-size: 32px; /* Define el tamano del titulo principal */
+    color: #114b7a; /* Cambia el color del titulo principal */
+    line-height: 1.1; /* Ajusta la altura entre lineas */
+}
+
+#mensaje {
+    min-height: 22px; /* Reserva espacio para mensajes sin mover el diseno */
+    font-size: 14px; /* Define el tamano del mensaje */
+    color: #516173; /* Cambia el color del mensaje */
+}
+
+input {
+    padding: 14px 15px; /* Agrega espacio interno */
+    width: 100%; /* Hace que el input ocupe todo el ancho */
+    border-radius: 14px; /* Redondea las esquinas */
+    border: 1px solid #d7e4ef; /* Agrega un borde suave */
+    box-sizing: border-box; /* Mantiene el ancho real bajo control */
+    background-color: #f8fbff; /* Pone fondo claro al campo */
+    color: #24303f; /* Cambia el color del texto */
+    font-size: 15px; /* Define el tamano del texto */
+    outline: none; /* Quita el borde azul por defecto del navegador */
+    transition: border-color 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease; /* Suaviza cambios visuales */
+}
+
+input:focus {
+    border-color: #7cc6ff; /* Cambia el color del borde al seleccionar */
+    box-shadow: 0 0 0 4px rgba(124, 198, 255, 0.18); /* Agrega halo de enfoque */
+    background-color: #ffffff; /* Aclara el fondo al enfocar */
+}
+
+input::placeholder {
+    color: #7b8a99; /* Cambia el color del texto guia */
+}
+
+button {
+    font-family: "Fredoka", sans-serif; /* Mantiene la misma fuente */
+    background-color: #114b7a; /* Pone fondo azul al boton */
+    border: none; /* Quita el borde por defecto */
+    padding: 14px; /* Agrega espacio interno */
+    color: #ffffff; /* Cambia el texto a blanco */
+    cursor: pointer; /* Muestra la manito al pasar el mouse */
+    border-radius: 14px; /* Redondea las esquinas */
+    width: 100%; /* Hace que el boton principal ocupe todo el ancho */
+    transition: background-color 0.2s ease, transform 0.2s ease; /* Suaviza animaciones */
+}
+
+button:hover {
+    background-color: #0b385d; /* Oscurece el boton al pasar el mouse */
+    transform: translateY(-1px); /* Lo mueve un poco hacia arriba */
+}
+
+.btn-ingresar {
+    font-size: 18px; /* Define el tamano del texto del boton */
+    font-weight: 600; /* Hace el texto mas grueso */
+    letter-spacing: 1px; /* Separa ligeramente las letras */
+}
+
+.password-container {
+    display: flex; /* Coloca input y boton del ojo en una misma fila */
+    align-items: center; /* Los centra verticalmente */
+    background: #f8fbff; /* Pone fondo claro al contenedor */
+    border-radius: 14px; /* Redondea las esquinas */
+    box-sizing: border-box; /* Controla el ancho real */
+    border: 1px solid #d7e4ef; /* Agrega borde suave */
+    transition: border-color 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease; /* Suaviza cambios visuales */
+}
+
+.password-container:focus-within {
+    border-color: #7cc6ff; /* Cambia el borde cuando el input interno esta activo */
+    box-shadow: 0 0 0 4px rgba(124, 198, 255, 0.18); /* Agrega halo de enfoque */
+    background-color: #ffffff; /* Aclara el fondo */
+}
+
+.password-container input {
+    border: none; /* Quita el borde interno */
+    outline: none; /* Quita el borde del navegador */
+    flex: 1; /* Hace que el input ocupe el espacio disponible */
+    padding: 14px 15px; /* Agrega espacio interno */
+    background: transparent; /* Usa el fondo del contenedor */
+    box-shadow: none; /* Quita cualquier sombra interna */
+}
+
+.password-container button {
+    background: transparent; /* Quita el fondo del boton del ojo */
+    border: none; /* Quita el borde */
+    cursor: pointer; /* Muestra la manito */
+    margin-left: 5px; /* Separa el boton del input */
+    margin-right: 8px; /* Deja espacio hacia la derecha */
+    width: auto; /* Evita que ocupe todo el ancho */
+    color: #516173; /* Cambia el color del icono */
+    padding: 8px 10px; /* Ajusta el tamano interno del boton */
+    font-size: 18px; /* Define el tamano del icono */
+    transform: none; /* Evita movimiento vertical heredado */
+}
+
+.password-container button:hover {
+    background: rgba(17, 75, 122, 0.08); /* Agrega un fondo suave al pasar el mouse */
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 12px; /* Reduce el espacio exterior en celular */
+    }
+
+    .login-conteiner {
+        width: 100%; /* Hace que el contenedor use todo el ancho posible */
+        padding: 24px 18px; /* Reduce el espacio interno */
+        border-radius: 20px; /* Hace las esquinas un poco mas pequenas */
+    }
+
+    .titulo h2 {
+        font-size: 22px; /* Reduce el tamano del titulo en celular */
+    }
+
+    input,
+    button {
+        font-size: 16px; /* Ajusta el tamano del texto para movil */
+    }
+
+    .btn-ingresar {
+        font-size: 17px; /* Ajusta el tamano del boton principal */
+    }
+}

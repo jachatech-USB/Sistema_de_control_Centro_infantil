@@ -1,0 +1,304 @@
+* {
+    box-sizing: border-box; /* Hace que padding y borde no aumenten el ancho real */
+    margin: 0; /* Quita los margenes por defecto */
+    padding: 0; /* Quita los espacios internos por defecto */
+}
+
+body {
+    font-family: "Fredoka", sans-serif; /* Define la fuente principal */
+    background: linear-gradient(135deg, #f7f4ea 0%, #dff1ff 100%); /* Crea el fondo degradado */
+    color: #24303f; /* Define el color base del texto */
+    min-height: 100vh; /* Hace que la pagina ocupe toda la altura de la pantalla */
+    padding: 32px 18px; /* Agrega espacio exterior arriba-abajo y a los lados */
+}
+
+.panel-registro {
+    max-width: 1100px; /* Limita el ancho maximo del panel */
+    margin: 0 auto; /* Centra el panel horizontalmente */
+    background: #ffffff; /* Pone fondo blanco al panel */
+    border-radius: 30px; /* Redondea las esquinas del panel */
+    padding: 32px; /* Agrega espacio interno */
+    box-shadow: 0 18px 45px rgba(38, 76, 110, 0.16); /* Agrega sombra para dar profundidad */
+}
+
+.inf-encabezado-reg{
+        width: 100%; /* Hace que este bloque ocupe todo el ancho disponible */
+}
+
+.encabezado-registro {
+    display: flex; /* Coloca el texto y el boton en una misma fila */
+    justify-content: space-between; /* Los separa entre izquierda y derecha */
+    align-items: flex-start; /* Los alinea arriba */
+    gap: 20px; /* Deja espacio entre ambos bloques */
+    margin-bottom: 28px; /* Separa el encabezado del formulario */
+    
+}
+
+.subtitulo {
+    color: #f08b2d; /* Cambia el color del subtitulo */
+    font-size: 14px; /* Define el tamano del subtitulo */
+    font-weight: 600; /* Hace el texto mas grueso */
+    text-transform: uppercase; /* Convierte el texto a mayusculas */
+    letter-spacing: 1px; /* Agrega separacion entre letras */
+    margin-bottom: 8px; /* Separa el subtitulo del titulo principal */
+}
+
+.fila-subtitulo {
+    display: flex; /* Coloca titulo y boton en una misma fila */
+    justify-content: space-between; /* Manda uno a la izquierda y otro a la derecha */
+    align-items: center; /* Alinea verticalmente al centro */
+    gap: 20px; /* Deja espacio entre titulo y boton */
+    margin-bottom: 10px; /* Separa esta fila de la descripcion */
+    
+}
+
+.fila-subtitulo h1 {
+    font-size: 38px; /* Define el tamano del titulo principal */
+    color: #114b7a; /* Cambia el color del titulo */
+    margin-bottom: 0; /* Quita margen inferior para mejor alineacion */
+}
+
+.boton-volver-inicio {
+    text-decoration: none; /* Quita el subrayado del enlace */
+    background-color: #114b7a; /* Pone fondo azul al boton */
+    color: #ffffff; /* Cambia el texto del boton a blanco */
+    padding: 12px 18px; /* Agrega espacio interno al boton */
+    border-radius: 14px; /* Redondea las esquinas del boton */
+    font-weight: 600; /* Hace el texto del boton mas grueso */
+    transition: transform 0.2s ease, background-color 0.2s ease; /* Suaviza animaciones */
+    white-space: nowrap; /* Evita que el texto del boton baje a otra linea */
+}
+
+.encabezado-registro h1 {
+    font-size: 38px; /* Define el tamano del titulo principal */
+    color: #114b7a; /* Cambia el color del titulo */
+    margin-bottom: 10px; /* Separa el titulo de la descripcion */
+}
+
+.descripcion {
+    max-width: 650px; /* Limita el ancho del parrafo para mejor lectura */
+    font-size: 17px; /* Define el tamano del texto */
+    color: #516173; /* Cambia el color del texto descriptivo */
+}
+
+.formulario-registro {
+    display: flex; /* Activa flexbox en el formulario */
+    flex-direction: column; /* Apila los bloques verticalmente */
+    gap: 24px; /* Deja espacio entre bloques */
+}
+
+.bloque-formulario {
+    background: #f8fbff; /* Pone fondo claro al bloque */
+    border: 1px solid #dce9f3; /* Agrega borde suave */
+    border-radius: 24px; /* Redondea las esquinas */
+    padding: 24px; /* Agrega espacio interno */
+}
+
+.bloque-titulo {
+    margin-bottom: 18px; /* Separa el titulo del contenido del bloque */
+}
+
+.bloque-titulo h2 {
+    color: #114b7a; /* Cambia el color del subtitulo */
+    font-size: 26px; /* Define el tamano del subtitulo */
+    margin-bottom: 6px; /* Separa el titulo del texto explicativo */
+}
+
+.bloque-titulo p {
+    color: #58697b; /* Cambia el color del texto explicativo */
+}
+
+.grid-formulario {
+    display: grid; /* Activa la cuadricula */
+    grid-template-columns: repeat(2, 1fr); /* Crea dos columnas iguales */
+    gap: 18px; /* Deja espacio entre campos */
+}
+
+.bloque-responsable {
+    width: 100%; /* Hace que el bloque del responsable use todo el ancho disponible */
+}
+
+.grid-responsable {
+    grid-template-columns: repeat(2, minmax(0, 1fr)); /* Organiza mejor los campos del responsable en tres columnas */
+}
+
+.seccion-estudiante {
+    margin-top: 18px; /* Separa esta seccion del bloque anterior */
+    padding-top: 18px; /* Agrega espacio interno arriba */
+    border-top: 1px dashed #d7e4ef; /* Dibuja una linea punteada superior */
+}
+
+label {
+    display: flex; /* Activa flexbox dentro de cada label */
+    flex-direction: column; /* Coloca texto e input uno debajo del otro */
+    gap: 8px; /* Separa el texto del campo */
+    font-weight: 500; /* Hace el texto un poco mas grueso */
+    color: #24303f; /* Cambia el color del texto */
+}
+
+
+
+input,
+select {
+    width: 100%; /* Hace que el campo ocupe todo el ancho */
+    padding: 14px 15px; /* Agrega espacio interno */
+    border-radius: 14px; /* Redondea las esquinas */
+    border: 1px solid #d7e4ef; /* Agrega borde suave */
+    background-color: #ffffff; /* Pone fondo blanco */
+    color: #24303f; /* Cambia el color del texto */
+    font-size: 15px; /* Define el tamano del texto */
+    outline: none; /* Quita el borde azul por defecto del navegador */
+    transition: border-color 0.2s ease, box-shadow 0.2s ease; /* Suaviza cambios visuales */
+}
+
+input:focus,
+select:focus {
+    border-color: #7cc6ff; /* Cambia el color del borde al seleccionar */
+    box-shadow: 0 0 0 4px rgba(124, 198, 255, 0.18); /* Agrega halo de enfoque */
+}
+
+.fila-cantidad {
+    display: flex; /* Coloca el campo y el boton en fila */
+    flex-wrap: wrap; /* Permite bajar elementos si no entran */
+    align-items: end; /* Los alinea por la parte inferior */
+    gap: 14px; /* Deja espacio entre elementos */
+}
+
+.campo-cantidad {
+    max-width: 180px; /* Limita el ancho del campo de cantidad */
+}
+
+.boton-primario,
+.boton-secundario {
+    display: inline-flex; /* Permite centrar el contenido del boton */
+    align-items: center; /* Centra verticalmente el texto */
+    justify-content: center; /* Centra horizontalmente el texto */
+    text-decoration: none; /* Quita el subrayado de enlaces */
+    border: none; /* Quita el borde por defecto */
+    border-radius: 16px; /* Redondea las esquinas */
+    padding: 14px 20px; /* Agrega espacio interno */
+    font-family: "Fredoka", sans-serif; /* Mantiene la misma fuente */
+    font-size: 16px; /* Define el tamano del texto */
+    font-weight: 600; /* Hace el texto mas grueso */
+    cursor: pointer; /* Muestra la manito al pasar el mouse */
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease; /* Suaviza animaciones */
+}
+
+.boton-primario {
+    background: #f08b2d; /* Pone fondo naranja */
+    color: #ffffff; /* Cambia el texto a blanco */
+    box-shadow: 0 12px 24px rgba(240, 139, 45, 0.28); /* Agrega sombra suave */
+}
+
+.boton-primario:hover {
+    background: #d7771f; /* Oscurece el boton al pasar el mouse */
+    transform: translateY(-2px); /* Lo eleva un poco */
+}
+
+.boton-secundario {
+    background: #114b7a; /* Pone fondo azul */
+    color: #ffffff; /* Cambia el texto a blanco */
+}
+
+.boton-secundario:hover {
+    background: #0b385d; /* Oscurece el boton al pasar el mouse */
+    transform: translateY(-2px); /* Lo eleva un poco */
+}
+
+.bloque-dinamico {
+    border-style: dashed; /* Cambia el estilo del borde a punteado */
+}
+
+.oculto {
+    display: none; /* Oculta el elemento */
+}
+
+.contenedor-ninos {
+    display: flex; /* Activa flexbox */
+    flex-direction: column; /* Apila las tarjetas de ninos */
+    gap: 18px; /* Deja espacio entre tarjetas */
+}
+
+.tarjeta-nino {
+    background: linear-gradient(135deg, #eef8ff 0%, #fff3e5 100%); /* Agrega fondo degradado */
+    border-radius: 22px; /* Redondea las esquinas */
+    padding: 22px; /* Agrega espacio interno */
+    border: 1px solid #f3f3dc; /* Agrega borde suave */
+}
+
+.tarjeta-nino h3 {
+    color: #114b7a; /* Cambia el color del titulo */
+    font-size: 22px; /* Define el tamano del titulo */
+    margin-bottom: 16px; /* Separa el titulo del contenido */
+}
+
+.acciones-formulario {
+    display: flex; /* Coloca los botones en fila */
+    justify-content: flex-end; /* Mueve el contenido hacia la derecha */
+}
+
+.boton-guardar {
+    min-width: 220px; /* Define un ancho minimo para el boton */
+}
+
+.mensaje-exito {
+    margin-top: 10px; /* Separa el mensaje del contenido superior */
+    color: #1a7b4f; /* Cambia el color del mensaje de exito */
+    font-weight: 600; /* Hace el texto mas grueso */
+}
+
+@media (max-width: 768px) {
+    .panel-registro {
+        padding: 24px 18px; /* Reduce el espacio interno en tablet */
+    }
+
+    .encabezado-registro {
+        flex-direction: column; /* Pone el encabezado en columna */
+    }
+
+    .grid-formulario {
+        grid-template-columns: 1fr; /* Pasa a una sola columna */
+    }
+
+    .grid-responsable {
+        grid-template-columns: 1fr 1fr; /* En tablet deja dos columnas para aprovechar mejor el ancho */
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 16px 10px; /* Reduce el espacio exterior en celular */
+    }
+
+    .panel-registro {
+        padding: 18px 14px; /* Reduce el espacio interno del panel */
+        border-radius: 20px; /* Hace esquinas un poco mas pequenas */
+    }
+
+    .encabezado-registro h1 {
+        font-size: 28px; /* Reduce el tamano del titulo principal */
+    }
+
+    .bloque-formulario {
+        padding: 18px; /* Reduce el espacio interno de los bloques */
+        border-radius: 20px; /* Reduce el redondeado */
+    }
+
+    .fila-cantidad,
+    .acciones-formulario {
+        flex-direction: column; /* Coloca los elementos uno debajo del otro */
+        align-items: stretch; /* Hace que ocupen todo el ancho */
+    }
+
+    .campo-cantidad,
+    .boton-guardar,
+    .boton-primario,
+    .boton-secundario {
+        width: 100%; /* Hace que ocupen todo el ancho */
+        max-width: none; /* Quita el ancho maximo */
+    }
+
+    .grid-responsable {
+        grid-template-columns: 1fr; /* En celular pasa a una sola columna */
+    }
+}

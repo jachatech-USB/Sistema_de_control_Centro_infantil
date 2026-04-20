@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Control de Padres</title>
+    <link rel="stylesheet" href="styles_padres.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <main class="panel-padres">
+        <section class="encabezado-beneficiarios">
+            <div class="inf-encabezado-padres">
+                <p class="subtitulo">Centro infantil don BOSQUITO</p>
+                <div class="fila-subtitulo">
+                    <h1>Inventario</h1>
+                    <a class="boton-volver-inicio" href="inicio.html">Volver al inicio</a>
+                </div>
+                <p class="descripcion">
+                    Aqui se mostrara los activos registrados y categorizados 
+                </p>
+            </div>
+        </section>
+
+
+        <section class="bloque-busqueda">
+            <div class="tabla-info">
+                <h2>Busqueda en el inventario</h2>
+                <p>Puedes buscar por codigo y </p>
+            </div>
+            
+                <section class="filtro-beneficiario">
+                    <button class="boton-filtro activo" data-filtro="todos">Todos</button>
+                    <button class="boton-filtro" data-filtro="si">Beneficiarios</button>
+                    <button class="boton-filtro" data-filtro="no">No beneficiarios</button>
+                </section>
+
+            <div class="formulario-busqueda">
+                <label>
+                    Buscar por
+                    <select id="tipoBusqueda">
+                        <option value="nombre">Nombre</option>
+                        <option value="ci">CI</option>
+                        <option value="codigo">Codigo estudiante</option>
+                    </select>
+                </label>
+
+                <label>
+                    Valor a buscar
+                    <input type="text" id="valorBusqueda" placeholder="Escribe el dato a buscar">
+                </label>
+
+                <button type="button" id="botonBuscar" class="boton-primario boton-buscar">Buscar</button>
+            </div>
+
+            <p id="mensajeBusqueda" class="mensaje-busqueda"></p>
+        </section>
+
+        <section class="bloque-tabla">
+            <div class="tabla-info">
+                <h2>Tabla de Padres</h2>
+                <p>Estos datos luego seran reemplazados por la informacion que llegue desde MySQL.</p>
+            </div>
+
+            <div class="tabla-contenedor">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Seleccion</th>
+                            <th>Beneficiario</th>
+                            <th>CI</th>
+                            <th>Telefono</th>
+                            <th>Codigo estudiante</th>
+                            <th>Carrera</th>
+                            <th>Semestre</th>
+                            <th>Ninos registrados</th>
+                        </tr>
+                    </thead>
+                        <tbody id="tablaBeneficiarios">
+                            <tr data-beneficiario="si">
+                                <td><input type="radio" name="beneficiarioSeleccionado"></td>
+                                <td>Maria Lopez</td>
+                                <td>12345678</td>
+                                <td>71234567</td>
+                                <td>INF-2024-001</td>
+                                <td>Sistemas Informaticos</td>
+                                <td>4to</td>
+                                <td>2</td>
+                            </tr>
+
+                            <tr data-beneficiario="no">
+                                <td><input type="radio" name="beneficiarioSeleccionado"></td>
+                                <td>Carlos Rojas</td>
+                                <td>87654321</td>
+                                <td>70112233</td>
+                                <td>ADM-2023-015</td>
+                                <td>Administracion</td>
+                                <td>5to</td>
+                                <td>1</td>
+                            </tr>
+
+                            <tr data-beneficiario="si">
+                                <td><input type="radio" name="beneficiarioSeleccionado"></td>
+                                <td>Lucia Fernandez</td>
+                                <td>56473829</td>
+                                <td>76543210</td>
+                                <td>ENF-2022-030</td>
+                                <td>Enfermeria</td>
+                                <td>6to</td>
+                                <td>3</td>
+                            </tr>
+                        </tbody>
+                </table>
+            </div>
+        </section>
+        
+        <section class="acciones-tabla">
+            <a href="registro_ninos.html" class="boton-primario">Agregar</a>
+            <button type="button" class="boton-secundario">Modificar</button>
+            <button type="button" class="boton-peligro">Eliminar</button>
+        </section>
+    </main>
+
+    <script src="beneficiarios.js"></script>
+</body>
+</html>

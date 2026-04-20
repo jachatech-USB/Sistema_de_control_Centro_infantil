@@ -1,0 +1,207 @@
+* {
+    box-sizing: border-box; /* Hace que el padding y el borde no agranden el ancho real */
+    margin: 0; /* Quita los margenes por defecto */
+    padding: 0; /* Quita los espacios internos por defecto */
+}
+
+body {
+    font-family: "Fredoka", sans-serif; /* Define la fuente principal */
+    background: linear-gradient(135deg, #f7f4ea 0%, #dff1ff 100%); /* Crea el fondo degradado */
+    color: #24303f; /* Define el color base del texto */
+    min-height: 100vh; /* Hace que la pagina ocupe toda la altura de la pantalla */
+    padding: 32px 18px; /* Agrega espacio interior arriba-abajo y lados */
+}
+
+.panel {
+    max-width: 95%; /* Limita el ancho maximo del contenedor principal */
+    margin: 0 auto; /* Centra el panel horizontalmente */
+    background-color: #ffffff; /* Pone fondo blanco al panel */
+    border-radius: 28px; /* Redondea las esquinas del panel */
+    padding: 32px; /* Agrega espacio interior dentro del panel */
+    box-shadow: 0 18px 45px rgba(38, 76, 110, 0.16); /* Agrega sombra para dar profundidad */
+}
+
+.encabezado {
+    margin-bottom: 28px; /* Separa el encabezado del contenido de abajo */
+}
+
+.info-encabezado {
+    width: 100%; /* Hace que este bloque ocupe todo el ancho disponible */
+}
+
+.subtitulo {
+    color: #f08b2d; /* Cambia el color del subtitulo */
+    font-size: 14px; /* Define el tamano del subtitulo */
+    font-weight: 600; /* Hace el texto mas grueso */
+    text-transform: uppercase; /* Convierte el texto a mayusculas */
+    letter-spacing: 1px; /* Agrega separacion entre letras */
+    margin-bottom: 8px; /* Separa el subtitulo del titulo */
+}
+
+.fila-titulo {
+    display: flex; /* Coloca titulo y boton en una misma fila */
+    justify-content: space-between; /* Manda uno a la izquierda y otro a la derecha */
+    align-items: center; /* Alinea verticalmente al centro */
+    gap: 20px; /* Deja espacio entre titulo y boton */
+    margin-bottom: 10px; /* Separa esta fila de la descripcion */
+}
+
+.fila-titulo h1 {
+    font-size: 38px; /* Define el tamano del titulo principal */
+    color: #114b7a; /* Cambia el color del titulo */
+    margin-bottom: 0; /* Quita margen inferior para mejor alineacion */
+}
+
+.descripcion {
+    max-width: 520px; /* Limita el ancho del parrafo para mejor lectura */
+    font-size: 17px; /* Define el tamano del texto descriptivo */
+    color: #516173; /* Cambia el color del texto descriptivo */
+}
+
+.boton-salida {
+    text-decoration: none; /* Quita el subrayado del enlace */
+    background-color: #114b7a; /* Pone fondo azul al boton */
+    color: #ffffff; /* Cambia el texto del boton a blanco */
+    padding: 12px 18px; /* Agrega espacio interno al boton */
+    border-radius: 14px; /* Redondea las esquinas del boton */
+    font-weight: 600; /* Hace el texto del boton mas grueso */
+    transition: transform 0.2s ease, background-color 0.2s ease; /* Suaviza animaciones */
+    white-space: nowrap; /* Evita que el texto del boton baje a otra linea */
+}
+
+.boton-salida:hover {
+    background-color: #0b385d; /* Oscurece el boton al pasar el mouse */
+    transform: translateY(-2px); /* Mueve el boton un poco hacia arriba */
+}
+
+.menu h2 {
+    font-size: 28px; /* Define el tamano del subtitulo del menu */
+    margin-bottom: 18px; /* Separa el titulo de las opciones */
+    color: #24303f; /* Cambia el color del titulo */
+}
+
+.acciones-principales {
+    margin-bottom: 24px; /* Separa el boton principal de las tarjetas */
+}
+
+.boton-accion {
+    display: inline-flex; /* Permite alinear el contenido del boton */
+    align-items: center; /* Centra el texto verticalmente */
+    justify-content: center; /* Centra el texto horizontalmente */
+    text-decoration: none; /* Quita el subrayado del enlace */
+    background-color: #f08b2d; /* Pone fondo naranja al boton */
+    color: #ffffff; /* Cambia el texto a blanco */
+    padding: 14px 20px; /* Agrega espacio interno */
+    border-radius: 16px; /* Redondea las esquinas */
+    font-weight: 600; /* Hace el texto mas grueso */
+    box-shadow: 0 10px 24px rgba(240, 139, 45, 0.28); /* Agrega sombra suave */
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease; /* Suaviza cambios visuales */
+}
+
+.boton-accion:hover {
+    background-color: #d7771f; /* Oscurece el boton al pasar el mouse */
+    transform: translateY(-2px); /* Eleva un poco el boton */
+    box-shadow: 0 14px 28px rgba(240, 139, 45, 0.32); /* Refuerza la sombra */
+}
+
+.opciones {
+    display: grid; /* Activa la cuadricula para las opciones */
+    grid-template-columns: repeat(2, 1fr); /* Crea 2 columnas iguales */
+    gap: 18px; /* Deja espacio entre opciones */
+}
+
+.opcion {
+    text-decoration: none; /* Quita el subrayado del enlace */
+    background-color: #f8fbff; /* Pone un fondo claro a cada tarjeta */
+    border: 2px solid transparent; /* Reserva espacio para el borde hover */
+    border-radius: 22px; /* Redondea las esquinas */
+    padding: 24px; /* Agrega espacio interno */
+    transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease; /* Suaviza animaciones */
+}
+
+.opcion:hover {
+    transform: translateY(-4px); /* Eleva la tarjeta un poco */
+    border-color: #7cc6ff; /* Muestra borde azul claro */
+    box-shadow: 0 12px 30px rgba(17, 75, 122, 0.12); /* Agrega sombra al pasar el mouse */
+}
+
+.opcion h3 {
+    color: #114b7a; /* Cambia el color del titulo de cada opcion */
+    font-size: 24px; /* Define el tamano del titulo */
+    margin-bottom: 10px; /* Separa titulo y texto */
+}
+
+.opcion-destacada {
+    background: linear-gradient(135deg, #eef8ff 0%, #fff3e5 100%); /* Resalta la opcion principal */
+}
+
+.opcion p {
+    color: #58697b; /* Cambia el color del texto */
+    line-height: 1.5; /* Aumenta la altura entre lineas */
+}
+
+@media (max-width: 768px) {
+    .panel {
+        padding: 24px 18px; /* Reduce el espacio interior en tablets */
+    }
+
+    .fila-titulo {
+        flex-wrap: wrap; /* Permite que el contenido baje si no entra */
+        align-items: center; /* Mantiene alineacion vertical centrada */
+    }
+
+    .opciones {
+        grid-template-columns: 1fr; /* Pasa a una sola columna */
+    }
+
+    .fila-titulo h1 {
+        font-size: 30px; /* Reduce el tamano del titulo */
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 16px 10px; /* Reduce el espacio exterior en celular */
+    }
+
+    .panel {
+        padding: 18px 14px; /* Reduce el espacio interior del panel */
+        border-radius: 18px; /* Hace esquinas un poco mas pequenas */
+    }
+
+    .fila-titulo {
+        flex-direction: row; /* Mantiene titulo y boton en fila */
+        align-items: center; /* Centra verticalmente */
+        justify-content: space-between; /* Separa titulo y boton */
+        gap: 12px; /* Reduce la distancia entre ambos */
+    }
+
+    .fila-titulo h1 {
+        font-size: 24px; /* Reduce el tamano del titulo principal */
+    }
+
+    .descripcion {
+        font-size: 15px; /* Reduce el tamano de la descripcion */
+    }
+
+    .opcion {
+        padding: 18px; /* Reduce el espacio interno de las tarjetas */
+    }
+
+    .opcion h3 {
+        font-size: 20px; /* Reduce el tamano del titulo de opcion */
+    }
+
+    .opcion p {
+        font-size: 14px; /* Reduce el tamano del texto */
+    }
+
+    .boton-salida {
+        padding: 10px 10px; /* Hace el boton mas compacto */
+        font-size: 14px; /* Reduce el tamano del texto del boton */
+    }
+
+    .boton-accion {
+        width: 100%; /* Hace que el boton principal use todo el ancho */
+    }
+}

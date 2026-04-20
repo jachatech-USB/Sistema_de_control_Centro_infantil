@@ -1,0 +1,343 @@
+* {
+    box-sizing: border-box; /* Hace que padding y borde no aumenten el ancho real */
+    margin: 0; /* Quita los margenes por defecto */
+    padding: 0; /* Quita los espacios internos por defecto */
+}
+
+body {
+    font-family: "Fredoka", sans-serif; /* Define la fuente principal */
+    background: linear-gradient(135deg, #f7f4ea 0%, #dff1ff 100%); /* Crea el fondo degradado */
+    color: #24303f; /* Define el color base del texto */
+    min-height: 100vh; /* Hace que la pagina ocupe toda la altura de la pantalla */
+    padding: 32px 18px; /* Agrega espacio exterior arriba-abajo y a los lados */
+}
+
+.panel-padres {
+    width: 95%; /* Limita el ancho maximo del panel */
+    margin: 0 auto; /* Centra el panel horizontalmente */
+    background: #ffffff; /* Pone fondo blanco al panel */
+    border-radius: 30px; /* Redondea las esquinas */
+    padding: 32px; /* Agrega espacio interno */
+    box-shadow: 0 18px 45px rgba(38, 76, 110, 0.16); /* Agrega sombra para dar profundidad */
+}
+
+.encabezado-beneficiarios {
+    display: flex; /* Coloca el texto y el boton en la misma fila */
+    justify-content: space-between; /* Los separa a izquierda y derecha */
+    align-items: flex-start; /* Los alinea arriba */
+    gap: 20px; /* Deja espacio entre bloques */
+    margin-bottom: 24px; /* Separa el encabezado del contenido inferior */
+}
+
+.subtitulo {
+    color: #f08b2d; /* Cambia el color del subtitulo */
+    font-size: 14px; /* Define el tamano del subtitulo */
+    font-weight: 600; /* Hace el texto mas grueso */
+    text-transform: uppercase; /* Convierte el texto a mayusculas */
+    letter-spacing: 1px; /* Agrega separacion entre letras */
+    margin-bottom: 8px; /* Separa el subtitulo del titulo */
+}
+
+.inf-encabezado-padres{
+        width: 100%; /* Hace que este bloque ocupe todo el ancho disponible */
+}
+
+.fila-subtitulo {
+    display: flex; /* Coloca titulo y boton en una misma fila */
+    justify-content: space-between; /* Manda uno a la izquierda y otro a la derecha */
+    align-items: center; /* Alinea verticalmente al centro */
+    gap: 20px; /* Deja espacio entre titulo y boton */
+    margin-bottom: 10px; /* Separa esta fila de la descripcion */
+    
+}
+
+.fila-subtitulo h1 {
+    font-size: 38px; /* Define el tamano del titulo principal */
+    color: #0e2436; /* Cambia el color del titulo */
+    margin-bottom: 0; /* Quita margen inferior para mejor alineacion */
+}
+
+.boton-volver-inicio {
+    text-decoration: none; /* Quita el subrayado del enlace */
+    background-color: #114b7a; /* Pone fondo azul al boton */
+    color: #ffffff; /* Cambia el texto del boton a blanco */
+    padding: 12px 18px; /* Agrega espacio interno al boton */
+    border-radius: 14px; /* Redondea las esquinas del boton */
+    font-weight: 600; /* Hace el texto del boton mas grueso */
+    transition: transform 0.2s ease, background-color 0.2s ease; /* Suaviza animaciones */
+    white-space: nowrap; /* Evita que el texto del boton baje a otra linea */
+}
+
+.encabezado-registro h1 {
+    font-size: 38px; /* Define el tamano del titulo principal */
+    color: #114b7a; /* Cambia el color del titulo */
+    margin-bottom: 10px; /* Separa el titulo de la descripcion */
+}
+
+
+.encabezado-beneficiarios h1 {
+    font-size: 38px; /* Define el tamano del titulo */
+    color: #114b7a; /* Cambia el color del titulo */
+    margin-bottom: 10px; /* Separa el titulo de la descripcion */
+}
+
+.descripcion {
+    max-width: 700px; /* Limita el ancho del texto para mejor lectura */
+    font-size: 17px; /* Define el tamano del texto */
+    color: #516173; /* Cambia el color del texto descriptivo */
+}
+
+.acciones-tabla {
+    display: flex; /* Coloca los botones en una fila */
+    flex-wrap: wrap; /* Permite que bajen si no entran */
+    gap: 14px; /* Deja espacio entre botones */
+    margin-bottom: 22px; /* Separa los botones de la tabla */
+    justify-content: right; /* Manda uno a la izquierda y otro a la derecha */
+
+}
+
+.filtro-beneficiario {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 18px;
+}
+
+.boton-filtro {
+    padding: 10px 18px;
+    border-radius: 14px;
+    border: none;
+    cursor: pointer;
+    font-family: "Fredoka", sans-serif;
+    font-weight: 600;
+    background: #dce9f3;
+    color: #24303f;
+    transition: 0.2s;
+}
+
+.boton-filtro:hover {
+    transform: translateY(-2px);
+}
+
+.boton-filtro.activo {
+    background: #f08b2d;
+    color: white;
+}
+
+.bloque-busqueda {
+    background: #f8fbff; /* Pone fondo claro al bloque de busqueda */
+    border: 1px solid #dce9f3; /* Agrega borde suave */
+    border-radius: 24px; /* Redondea las esquinas */
+    padding: 24px; /* Agrega espacio interno */
+    margin-bottom: 22px; /* Separa la busqueda de la tabla */
+}
+
+.formulario-busqueda {
+    display: grid; /* Activa la cuadricula para los elementos de busqueda */
+    grid-template-columns: 220px 1fr 160px; /* Organiza selector, campo y boton */
+    gap: 18px; /* Deja espacio entre los elementos */
+    align-items: end; /* Alinea los elementos por la parte inferior */
+}
+
+label {
+    display: flex; /* Activa flexbox en cada label */
+    flex-direction: column; /* Coloca texto e input uno debajo del otro */
+    gap: 8px; /* Separa el titulo del campo */
+    font-weight: 500; /* Hace el texto un poco mas grueso */
+    color: #24303f; /* Cambia el color del texto */
+}
+
+input[type="text"] {
+    width: 100%; /* Hace que el campo use todo el ancho */
+    padding: 14px 15px; /* Agrega espacio interno */
+    border-radius: 14px; /* Redondea las esquinas */
+    border: 1px solid #d7e4ef; /* Agrega borde suave */
+    background-color: #ffffff; /* Pone fondo blanco */
+    color: #24303f; /* Cambia el color del texto */
+    font-size: 15px; /* Define el tamano del texto */
+    outline: none; /* Quita el borde azul del navegador */
+    transition: border-color 0.2s ease, box-shadow 0.2s ease; /* Suaviza cambios visuales */
+}
+
+input[type="text"]:focus {
+    border-color: #7cc6ff; /* Cambia el color del borde al seleccionar */
+    box-shadow: 0 0 0 4px rgba(124, 198, 255, 0.18); /* Agrega halo de enfoque */
+}
+
+select {
+    width: 100%; /* Hace que el selector use todo el ancho */
+    padding: 14px 15px; /* Agrega espacio interno */
+    border-radius: 14px; /* Redondea las esquinas */
+    border: 1px solid #d7e4ef; /* Agrega borde suave */
+    background-color: #ffffff; /* Pone fondo blanco */
+    color: #24303f; /* Cambia el color del texto */
+    font-size: 15px; /* Define el tamano del texto */
+    outline: none; /* Quita el borde azul del navegador */
+    transition: border-color 0.2s ease, box-shadow 0.2s ease; /* Suaviza cambios visuales */
+}
+
+select:focus {
+    border-color: #7cc6ff; /* Cambia el color del borde al seleccionar */
+    box-shadow: 0 0 0 4px rgba(124, 198, 255, 0.18); /* Agrega halo de enfoque */
+}
+
+.boton-buscar {
+    width: 100%; /* Hace que el boton de busqueda use todo su espacio */
+}
+
+.mensaje-busqueda {
+    margin-top: 14px; /* Separa el mensaje del formulario de busqueda */
+    color: #516173; /* Cambia el color del mensaje */
+    font-weight: 500; /* Hace el texto un poco mas grueso */
+}
+
+.boton-primario,
+.boton-secundario,
+.boton-peligro {
+    display: inline-flex; /* Permite centrar el contenido del boton */
+    align-items: center; /* Centra verticalmente el texto */
+    justify-content: center; /* Centra horizontalmente el texto */
+    text-decoration: none; /* Quita el subrayado de enlaces */
+    border: none; /* Quita el borde por defecto */
+    border-radius: 16px; /* Redondea las esquinas */
+    padding: 14px 20px; /* Agrega espacio interno */
+    font-family: "Fredoka", sans-serif; /* Mantiene la misma fuente */
+    font-size: 16px; /* Define el tamano del texto */
+    font-weight: 600; /* Hace el texto mas grueso */
+    cursor: pointer; /* Muestra la manito al pasar el mouse */
+    transition: transform 0.2s ease, background-color 0.2s ease; /* Suaviza animaciones */
+}
+
+.boton-primario {
+    background: #f08b2d; /* Pone fondo naranja */
+    color: #ffffff; /* Cambia el texto a blanco */
+}
+
+.boton-primario:hover {
+    background: #d7771f; /* Oscurece el boton al pasar el mouse */
+    transform: translateY(-2px); /* Lo eleva un poco */
+}
+
+.boton-secundario {
+    background: #114b7a; /* Pone fondo azul */
+    color: #ffffff; /* Cambia el texto a blanco */
+}
+
+.boton-secundario:hover {
+    background: #0b385d; /* Oscurece el boton al pasar el mouse */
+    transform: translateY(-2px); /* Lo eleva un poco */
+}
+
+.boton-peligro {
+    background: #d94a4a; /* Pone fondo rojo */
+    color: #ffffff; /* Cambia el texto a blanco */
+}
+
+.boton-peligro:hover {
+    background: #bc3434; /* Oscurece el boton al pasar el mouse */
+    transform: translateY(-2px); /* Lo eleva un poco */
+}
+
+.bloque-tabla {
+    background: #f8fbff; /* Pone fondo claro al bloque */
+    border: 1px solid #dce9f3; /* Agrega borde suave */
+    border-radius: 24px; /* Redondea las esquinas */
+    padding: 24px; /* Agrega espacio interno */
+    margin-bottom: 15px; /* Separa la busqueda de la tabla */
+}
+
+.tabla-info {
+    margin-bottom: 18px; /* Separa el titulo de la tabla */
+    
+}
+
+.tabla-info h2 {
+    color: #114b7a; /* Cambia el color del subtitulo */
+    font-size: 26px; /* Define el tamano del subtitulo */
+    margin-bottom: 6px; /* Separa del texto explicativo */
+}
+
+.tabla-info p {
+    color: #58697b; /* Cambia el color del texto explicativo */
+}
+
+.tabla-contenedor {
+    overflow-x: auto; /* Permite desplazamiento horizontal si la tabla no entra */
+    
+}
+
+table {
+    width: 100%; /* Hace que la tabla use todo el ancho disponible */
+    border-collapse: collapse; /* Une los bordes de la tabla */
+    min-width: 800px; /* Mantiene un ancho minimo para evitar deformacion */
+}
+
+thead {
+    background: #114b7a; /* Pone fondo azul al encabezado de la tabla */
+    color: #ffffff; /* Cambia el texto del encabezado a blanco */
+}
+
+th,
+td {
+    padding: 14px 12px; /* Agrega espacio dentro de celdas */
+    text-align: left; /* Alinea el texto a la izquierda */
+    border-bottom: 1px solid #dce9f3; /* Dibuja una linea inferior entre filas */
+}
+
+tbody tr:nth-child(even) {
+    background: #fdfefe; /* Cambia el fondo de filas pares */
+}
+
+tbody tr:hover {
+    background: #eef8ff; /* Cambia el fondo al pasar el mouse sobre la fila */
+}
+
+input[type="radio"] {
+    accent-color: #f08b2d; /* Cambia el color del radio button */
+}
+
+@media (max-width: 768px) {
+    .panel-padres {
+        padding: 24px 18px; /* Reduce el espacio interno en tablet */
+    }
+
+    .encabezado-beneficiarios {
+        flex-direction: column; /* Coloca el encabezado en columna */
+    }
+
+    .formulario-busqueda {
+        grid-template-columns: 1fr; /* Pasa la busqueda a una sola columna */
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 16px 10px; /* Reduce el espacio exterior en celular */
+    }
+
+    .panel-padres {
+        padding: 18px 14px; /* Reduce el espacio interno del panel */
+        border-radius: 20px; /* Hace esquinas un poco mas pequenas */
+    }
+
+    .encabezado-beneficiarios h1 {
+        font-size: 28px; /* Reduce el tamano del titulo */
+    }
+
+    .acciones-tabla {
+        flex-direction: column; /* Coloca los botones uno debajo del otro */
+    }
+
+    .boton-primario,
+    .boton-secundario,
+    .boton-peligro {
+        width: 100%; /* Hace que los botones ocupen todo el ancho */
+    }
+
+    .bloque-tabla {
+        padding: 18px; /* Reduce el espacio interno del bloque */
+    }
+
+    .bloque-busqueda {
+        padding: 18px; /* Reduce el espacio interno del bloque de busqueda */
+    }
+}
